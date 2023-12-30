@@ -1,0 +1,9 @@
+{
+    "type": "ROOT",
+    "children": [
+        {"type": "DML", "value": "SELECT", "is_group": false},
+        {"type": "Wildcard", "value": "*", "is_group": false},
+        {"type": "Keyword", "value": "FROM", "is_group": false},
+        {"type": "Identifier", "value": "users", "is_group": false}
+    ]
+}

@@ -1,0 +1,1 @@
+SELECT name, age FROM People WHERE age > 30

@@ -1,0 +1,41 @@
+{
+    "type": "ROOT",
+    "children": [
+        {"type": "DML", "value": "SELECT", "is_group": false},
+        {"type": "Identifier", "value": "u.id", "is_group": false},
+        {"type": "Subselect", "value": "(SELECT COUNT(*) FROM orders WHERE orders.user_id = u.id)", "is_group": true, "children": [
+            {"type": "DML", "value": "SELECT", "is_group": false},
+            {"type": "Function", "value": "COUNT(*)", "is_group": false},
+            {"type": "Keyword", "value": "FROM", "is_group": false},
+            {"type": "Identifier", "value": "orders", "is_group": false},
+            {"type": "Where", "value": "WHERE orders.user_id = u.id", "is_group": true, "children": [
+                {"type": "Comparison", "value": "orders.user_id = u.id", "is_group": false}
+            ]}
+        ]},
+        {"type": "Subselect", "value": "(SELECT AVG(amount) FROM payments WHERE payments.user_id = u.id)", "is_group": true, "children": [
+            {"type": "DML", "value": "SELECT", "is_group": false},
+            {"type": "Function", "value": "AVG(amount)", "is_group": false},
+            {"type": "Keyword", "value": "FROM", "is_group": false},
+            {"type": "Identifier", "value": "payments", "is_group": false},
+            {"type": "Where", "value": "WHERE payments.user_id = u.id", "is_group": true, "children": [
+                {"type": "Comparison", "value": "payments.user_id = u.id", "is_group": false}
+            ]}
+        ]},
+        {"type": "Keyword", "value": "FROM", "is_group": false},
+        {"type": "Identifier", "value": "users u", "is_group": false},
+        {"type": "Where", "value": "WHERE u.registration_date BETWEEN '2020-01-01' AND '2020-12-31' AND (u.status = 'active' OR u.id IN (SELECT user_id FROM vip_users))", "is_group": true, "children": [
+            {"type": "Comparison", "value": "u.registration_date BETWEEN '2020-01-01' AND '2020-12-31'", "is_group": false},
+            {"type": "Boolean", "value": "AND", "is_group": false},
+            {"type": "Parenthesis", "value": "(u.status = 'active' OR u.id IN (SELECT user_id FROM vip_users))", "is_group": true, "children": [
+                {"type": "Comparison", "value": "u.status = 'active'", "is_group": false},
+                {"type": "Boolean", "value": "OR", "is_group": false},
+                {"type": "Subselect", "value": "(SELECT user_id FROM vip_users)", "is_group": true, "children": [
+                    {"type": "DML", "value": "SELECT", "is_group": false},
+                    {"type": "Identifier", "value": "user_id", "is_group": false},
+                    {"type": "Keyword", "value": "FROM", "is_group": false},
+                    {"type": "Identifier", "value": "vip_users", "is_group": false}
+                ]}
+            ]}
+        ]}
+    ]
+}

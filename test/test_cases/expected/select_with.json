@@ -1,0 +1,24 @@
+{
+    "type": "ROOT",
+    "children": [
+        {"type": "CTE", "value": "WITH", "is_group": true, "children": [
+            {"type": "Identifier", "value": "cte", "is_group": false},
+            {"type": "Keyword", "value": "AS", "is_group": false},
+            {"type": "Subselect", "value": "(...)", "is_group": true, "children": [
+                {"type": "DML", "value": "SELECT", "is_group": false},
+                {"type": "Identifier", "value": "col1", "is_group": false},
+                {"type": "Keyword", "value": "FROM", "is_group": false},
+                {"type": "Identifier", "value": "table1", "is_group": false},
+                {"type": "SetOperation", "value": "UNION", "is_group": false},
+                {"type": "DML", "value": "SELECT", "is_group": false},
+                {"type": "Identifier", "value": "col2", "is_group": false},
+                {"type": "Keyword", "value": "FROM", "is_group": false},
+                {"type": "Identifier", "value": "table2", "is_group": false}
+            ]}
+        ]},
+        {"type": "DML", "value": "SELECT", "is_group": false},
+        {"type": "Wildcard", "value": "*", "is_group": false},
+        {"type": "Keyword", "value": "FROM", "is_group": false},
+        {"type": "Identifier", "value": "cte", "is_group": false}
+    ]
+}

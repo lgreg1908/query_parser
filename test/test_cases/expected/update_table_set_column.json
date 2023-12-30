@@ -1,0 +1,10 @@
+{
+    "type": "ROOT",
+    "children": [
+        {"type": "DML", "value": "UPDATE", "is_group": false},
+        {"type": "Identifier", "value": "table", "is_group": false},
+        {"type": "Keyword", "value": "SET", "is_group": false},
+        {"type": "Identifier", "value": "column1", "is_group": false},
+        {"type": "Comparison", "value": "= 10", "is_group": false}
+    ]
+}

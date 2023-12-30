@@ -1,0 +1,9 @@
+{
+    "type": "ROOT",
+    "children": [
+        {"type": "DML", "value": "SELECT", "is_group": false},
+        {"type": "Identifier", "value": "column", "is_group": false},
+        {"type": "Keyword", "value": "FROM", "is_group": false},
+        {"type": "Identifier", "value": "table", "is_group": false}
+    ]
+}

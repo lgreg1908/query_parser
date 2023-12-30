@@ -1,0 +1,15 @@
+{
+    "type": "ROOT",
+    "children": [
+        {"type": "DML", "value": "SELECT", "is_group": false},
+        {"type": "IdentifierList", "value": "name, age", "is_group": true, "children": [
+            {"type": "Identifier", "value": "name", "is_group": false},
+            {"type": "Identifier", "value": "age", "is_group": false}
+        ]},
+        {"type": "Keyword", "value": "FROM", "is_group": false},
+        {"type": "Identifier", "value": "People", "is_group": false},
+        {"type": "Where", "value": "WHERE age > 30", "is_group": true, "children": [
+            {"type": "Comparison", "value": "age > 30", "is_group": false}
+        ]}
+    ]
+}
